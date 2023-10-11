@@ -19,7 +19,7 @@ function Projects(){
             <h1>Age Calculator</h1>
             <img className='pro-image' src="./images/agecalc.png" alt='Age calculator'></img>
             <br></br>
-            <Link className='route' to='/'>Go back to Home</Link>
+            <Link className='route' to='/portfolio/'>Go back to Home</Link>
             
         </div>
 

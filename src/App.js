@@ -64,7 +64,7 @@ function App() {
             {/* <a href='#'>GitHub page URL</a> */}
             <br></br>
 
-              <Link className='route' to='/projects'>Explore</Link>
+              <Link className='route' to='/portfolio/projects'>Explore</Link>
             </section>
           </section>
             

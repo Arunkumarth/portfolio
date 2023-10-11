@@ -8,27 +8,14 @@ import { Link } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <h1>React</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React click here
-        </a>
-      </header> */}
+ 
       <div className='flex-container'>
 
         <section className='color-container'>
          <section className='outer-grid'>
          <div className='name'>
          <h2>Arunkumar.T</h2>
+         {/* <p>fresher</p> */}
          <PhoneOutlined />
           <span>9597170376</span><br/>
           <MailOutlined />
@@ -40,8 +27,6 @@ function App() {
          </section>
         </section>
         
-       
-      
         {/* <section className='color-container c2'>
           <section className='outer-grid'>
             <section className='name'>
@@ -52,7 +37,7 @@ function App() {
           </section>
         </section> */}
 
-        <section className='color-container c3'>
+        <section className='color-container '>
          <section className='outer-grid'>
           <h2>Courses</h2>
 
@@ -68,7 +53,7 @@ function App() {
           </section>  
          </section>
         </section>
-        <section className='color-container c4'>
+        <section className='color-container '>
           <section className='outer-grid'>
           <h2>Projects</h2>
             <section className='justify-end'>
@@ -84,7 +69,7 @@ function App() {
           </section>
             
         </section>
-        <section className='color-container c5'>
+        <section className='color-container '>
           <section className='outer-grid'>
           <h2>Skills</h2>
           <ul className='justify-end'>
@@ -99,7 +84,7 @@ function App() {
           </section>
         </section>
 
-        <section className='color-container c6'>
+        <section className='color-container '>
          <section className='outer-grid'>
          <h2>Education</h2>
             <div className='justify-end'>
@@ -118,7 +103,7 @@ function App() {
 
          </section>
         </section>
-        <section className='color-container c7'>
+        <section className='color-container '>
           <sectio className='outer-grid'>
           <h2>Other tools</h2>
           <ul className='justify-end'>

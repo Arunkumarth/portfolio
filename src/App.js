@@ -27,15 +27,7 @@ function App() {
          </section>
         </section>
         
-        {/* <section className='color-container c2'>
-          <section className='outer-grid'>
-            <section className='name'>
-            <h2>Address</h2>
-         <p> Do.No:9/5,Lakkumanaickenpatti,</p>
-         <p>Kangeyam -638 111</p>
-            </section>
-          </section>
-        </section> */}
+       
 
         <section className='color-container '>
          <section className='outer-grid'>

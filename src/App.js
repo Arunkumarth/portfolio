@@ -1,20 +1,27 @@
 import './App.css';
-import {  Progress } from 'antd';
+import { Progress } from 'antd';
 import {
   PhoneOutlined,
   MailOutlined
 } from '@ant-design/icons';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import Projects from './projectsPage';
+
 function App() {
+  const [show,showChange]=useState(0);
+  function showProjects(){
+    showChange(a=>!a);
+  }
   return (
     <div className="App">
- 
+      
+      
       <div className='flex-container'>
-
+    \
         <section className='color-container'>
          <section className='outer-grid'>
          <div className='name'>
-         <h2>Arunkumar.T</h2>
+         <h2>Arunkumar.T </h2>
          {/* <p>fresher</p> */}
          <PhoneOutlined />
           <span>9597170376</span><br/>
@@ -22,63 +29,61 @@ function App() {
           <span>t.arunkumar3112002@gmail.com</span>
          </div>
          <div className=' justify-end' >
-         <img className='arun' src='./images/arun.jpg' width={190} height={200} alt='person' ></img>
+         <img className='arun' src='./images/arun.jpg' width={170} height={180} alt='person' ></img>
          </div>
          </section>
         </section>
-        
-        {/* <section className='color-container c2'>
-          <section className='outer-grid'>
-            <section className='name'>
-            <h2>Address</h2>
-         <p> Do.No:9/5,Lakkumanaickenpatti,</p>
-         <p>Kangeyam -638 111</p>
-            </section>
-          </section>
-        </section> */}
+      
 
         <section className='color-container '>
          <section className='outer-grid'>
           <h2>Courses</h2>
+          <br></br>
+          {/* <section className='justify-end'> */}
+            <span>
+              1. Completed HTML,CSS,Java Script course in Coursera
+            </span>
+          <br></br>
 
-          <section className='justify-end'>
-          <ul>
-            <li>
-              Completed HTML,CSS,Java Script course in Coursera
-            </li>
-            <li>
-              Completed Python course in Guvi
-              </li>
-          </ul>
-          </section>  
+            <span>
+              2. Completed Python course in Guvi
+              </span>
+          {/* </section>   */}
          </section>
         </section>
         <section className='color-container '>
-          <section className='outer-grid'>
-          <h2>Projects</h2>
+         <div className='project-grid'>
+             <h2>Projects</h2>
+           {show?null:<>
             <section className='justify-end'>
               <li>Portfolio</li>
               <li>To Do List</li>
               <li>Age Calculator</li>
               <li>Task List</li>
-            {/* <a href='#'>GitHub page URL</a> */}
-            <br></br>
-
-              <Link className='route' to='/portfolio/projects'>Explore</Link>
+              <button className='btn-more hov' onClick={showProjects}>More info</button>
             </section>
-          </section>
-            
+           </>}
+              {/* <Link className='route' to='/projects'>Explore</Link> */}
+            <section>
+            {show?<>
+            <button className='btn-close hov' onClick={showProjects}>close</button>
+            <Projects/>
+            </>:null}
+            </section>
+
+         </div>
+
         </section>
         <section className='color-container '>
           <section className='outer-grid'>
           <h2>Skills</h2>
           <ul className='justify-end'>
             <li>HTML and CSS</li>
-            <Progress percent={100} size="small" />
+            <Progress percent={95} trailColor='white' size="small" status="active"/>
             <li>Java Script</li>
-            <Progress percent={90} size="small" status="active" />
+            <Progress percent={90} trailColor='white'  size="small" status="active" />
             <li>React</li>
-            <Progress percent={80} size="small" status="active" />
+            <Progress percent={80} trailColor='white'  size="small" status="active" />
 
           </ul>
           </section>
@@ -104,9 +109,10 @@ function App() {
          </section>
         </section>
         <section className='color-container '>
-          <sectio className='outer-grid'>
-          <h2>Other tools</h2>
-          <ul className='justify-end'>
+          <section className='outer-grid'>
+          <h2>Tools used</h2>
+         <div className='justify-end'>
+         <ul >
             <li>Redux and Saga</li>
             <li> React UI library -
             Ant Design
@@ -114,7 +120,8 @@ function App() {
             <li>Axios</li>
             <li>Version Control System-Git</li>
           </ul>
-          </sectio>
+         </div>
+          </section>
         </section>
       </div>
     </div>
